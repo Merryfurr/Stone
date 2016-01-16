@@ -12,6 +12,8 @@ The enhanced Glowstone fork with an emphasis on performance, control and compati
 
 [![Brick List](https://raw.githubusercontent.com/Merryfurr/Stone/master/etc/img/BricksPlugins%20List.png)](https://docs.google.com/spreadsheets/d/1615v8892t4ClFtLJeVPxAABvsxv9WbtIax0kxh_b48o/edit?usp=sharing)
 
+[![0.1.0 Video](http://s23.postimg.org/gpdqgfifv/youtube_vid_thing_for_readme.png)](https://youtu.be/Wac7n8t8LPk)
+
 Currently the major changes from Glowstone include:
 
 * Tracks the [Spigot 1.8.8 update of the Bukkit API](https://hub.spigotmc.org/javadocs/bukkit/)
