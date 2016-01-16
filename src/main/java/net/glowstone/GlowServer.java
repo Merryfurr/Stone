@@ -188,7 +188,7 @@ public final class GlowServer implements Server {
                 System.out.println("  --log-pattern, -L <pattern>    Sets the log file pattern (%D for date).");
                 return null;
             } else if ("--version".equals(opt) || "-v".equals(opt)) {
-                System.out.println("Glowstone version: " + GlowServer.class.getPackage().getImplementationVersion());
+                System.out.println("Glowstone version: " + "0.2.0 DEV");
                 System.out.println("Bukkit version:    " + GlowServer.class.getPackage().getSpecificationVersion());
                 System.out.println("Minecraft version: " + GAME_VERSION + " protocol " + PROTOCOL_VERSION);
                 return null;
