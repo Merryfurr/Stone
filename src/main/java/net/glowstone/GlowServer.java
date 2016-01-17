@@ -158,7 +158,7 @@ public final class GlowServer implements Server {
     private static ServerConfig parseArguments(String[] args) {
         final Map<ServerConfig.Key, Object> parameters = new EnumMap<>(ServerConfig.Key.class);
         String configDirName = "config";
-        String configFileName = "glowstone.yml";
+        String configFileName = "stone.yml";
 
         // Calculate acceptable parameters
         for (int i = 0; i < args.length; i++) {
@@ -188,7 +188,7 @@ public final class GlowServer implements Server {
                 System.out.println("  --log-pattern, -L <pattern>    Sets the log file pattern (%D for date).");
                 return null;
             } else if ("--version".equals(opt) || "-v".equals(opt)) {
-                System.out.println("Glowstone version: " + "0.2.0 DEV");
+                System.out.println("Stone version: " + "0.2.0 DEV");
                 System.out.println("Bukkit version:    " + GlowServer.class.getPackage().getSpecificationVersion());
                 System.out.println("Minecraft version: " + GAME_VERSION + " protocol " + PROTOCOL_VERSION);
                 return null;
@@ -718,7 +718,7 @@ public final class GlowServer implements Server {
 
         File folder = new File(config.getString(ServerConfig.Key.PLUGIN_FOLDER));
         if (!folder.isDirectory() && !folder.mkdirs()) {
-            logger.log(Level.SEVERE, "Could not create plugins directory: " + folder);
+            logger.log(Level.SEVERE, "Could not create bricks directory: " + folder);
         }
 
         // detect plugin types
@@ -1043,7 +1043,7 @@ public final class GlowServer implements Server {
 
     @Override
     public String getName() {
-        return "Glowstone++";
+        return "Stone";
     }
 
     @Override

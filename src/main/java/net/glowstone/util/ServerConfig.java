@@ -313,12 +313,12 @@ public final class ServerConfig {
         // server
         SERVER_IP("server.ip", "", Migrate.PROPS, "server-ip"),
         SERVER_PORT("server.port", 25565, Migrate.PROPS, "server-port"),
-        SERVER_NAME("server.name", "Glowstone++ Server", Migrate.PROPS, "server-name"),
+        SERVER_NAME("server.name", "Stone Server", Migrate.PROPS, "server-name"),
         LOG_FILE("server.log-file", "logs/log-%D.txt"),
         ONLINE_MODE("server.online-mode", true, Migrate.PROPS, "online-mode"),
         MAX_PLAYERS("server.max-players", 20, Migrate.PROPS, "max-players"),
         WHITELIST("server.whitelisted", false, Migrate.PROPS, "white-list"),
-        MOTD("server.motd", "Glowstone++ server", Migrate.PROPS, "motd"),
+        MOTD("server.motd", "Stone server", Migrate.PROPS, "motd"),
         SHUTDOWN_MESSAGE("server.shutdown-message", "Server shutting down.", Migrate.BUKKIT, "settings.shutdown-message"),
         USE_JLINE("server.use-jline", true),
 
@@ -351,7 +351,7 @@ public final class ServerConfig {
         ANIMAL_TICKS("creatures.ticks.animal", 400, Migrate.BUKKIT, "ticks-per.animal-spawns"),
 
         // folders
-        PLUGIN_FOLDER("folders.plugins", "plugins"),
+        PLUGIN_FOLDER("folders.plugins", "bricks"),
         UPDATE_FOLDER("folders.update", "update", Migrate.BUKKIT, "settings.update-folder"),
         WORLD_FOLDER("folders.worlds", "worlds", Migrate.BUKKIT, "settings.world-container"),
 
@@ -396,8 +396,8 @@ public final class ServerConfig {
         // database
         DB_DRIVER("database.driver", "org.sqlite.JDBC", Migrate.BUKKIT, "database.driver"),
         DB_URL("database.url", "jdbc:sqlite:config/database.db", Migrate.BUKKIT, "database.url"),
-        DB_USERNAME("database.username", "glowstone", Migrate.BUKKIT, "database.username"),
-        DB_PASSWORD("database.password", "nether", Migrate.BUKKIT, "database.password"),
+        DB_USERNAME("database.username", "stone", Migrate.BUKKIT, "database.username"),
+        DB_PASSWORD("database.password", "overworld", Migrate.BUKKIT, "database.password"),
         DB_ISOLATION("database.isolation", "SERIALIZABLE", Migrate.BUKKIT, "database.isolation");
 
         private final String path;
