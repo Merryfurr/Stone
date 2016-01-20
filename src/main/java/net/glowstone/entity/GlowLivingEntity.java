@@ -1,8 +1,3 @@
-GlowstonePlusPlus/src/main/java/net/glowstone/entity/GlowLivingEntity.java
-b011cde  11 hours ago
-@twizmwazin twizmwazin Remove mobs 20 ticks after death, fixes #156
-17 contributors @SpaceManiac @jaredStef @deathcap @zml2008 @mastercoms @Aaron1011 @PaulBGD @akrieger @Tonodus @Johni0702 @jimmikaelkael @ewized @dequis @turt2live @twizmwazin @zhuowei @zyuiop
-RawBlameHistory    737 lines (613 sloc)  20.1 KB
 package net.glowstone.entity;
 
 import com.flowpowered.networking.Message;
