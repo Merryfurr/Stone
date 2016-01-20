@@ -13,7 +13,6 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.util.Vector;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -31,35 +30,20 @@ public final class GlowItem extends GlowEntity implements Item {
     private static final int LIFETIME = 5 * 60 * 20;
 
     /**
-     * Velocity reduction applied each tick.
-     */
-    private static final double AIR_DRAG = 0.99;
-
-    /**
-     * Velocity reduction applied each tick.
-     */
-    private static final double LIQUID_DRAG = 0.8;
-
-    /**
-     * Gravity acceleration applied each tick.
-     */
-    private static final Vector GRAVITY = new Vector(0, -0.05, 0);
-
-    /**
      * The remaining delay until this item may be picked up.
-     */
+    */
     private int pickupDelay;
 
     /**
      * A player to bias this item's pickup selection towards.
-     */
+    */
     private GlowPlayer biasPlayer;
 
     /**
      * Creates a new item entity.
      * @param location The location of the entity.
      * @param item The item stack the entity is carrying.
-     */
+    */
     public GlowItem(Location location, ItemStack item) {
         super(location);
         setItemStack(item);
@@ -136,26 +120,6 @@ public final class GlowItem extends GlowEntity implements Item {
         if (getTicksLived() >= LIFETIME) {
             remove();
         }
-    }
-
-    @Override
-    protected void pulsePhysics() {
-        // simple temporary gravity - should eventually be improved to be real
-        // physics and moved up to GlowEntity
-        if (location.getBlock().getType().isSolid()) {
-            setRawLocation(location.clone().add(0, 0.2, 0));
-        }
-        if (!location.clone().add(getVelocity()).getBlock().getType().isSolid()) {
-            location.add(getVelocity());
-            if (location.getBlock().isLiquid()) {
-                velocity.multiply(LIQUID_DRAG);
-            } else {
-                velocity.multiply(AIR_DRAG);
-            }
-            velocity.add(GRAVITY);
-        }
-
-        super.pulsePhysics();
     }
 
     @Override
