@@ -10,7 +10,7 @@ The enhanced Glowstone fork with an emphasis on performance, control and compati
 
 ![Built with Love](http://forthebadge.com/images/badges/built-with-love.svg)
 
-[![Brick List](https://raw.githubusercontent.com/Merryfurr/Stone/master/etc/img/BricksPlugins%20List.png)](https://docs.google.com/spreadsheets/d/1615v8892t4ClFtLJeVPxAABvsxv9WbtIax0kxh_b48o/edit?usp=sharing)
+[![Brick List](https://raw.githubusercontent.com/Merryfurr/Stone/master/etc/img/BricksPlugins%20List.png)](http://stonepowered.ml/bricks/)
 
 [![0.1.0 Video](http://s23.postimg.org/gpdqgfifv/youtube_vid_thing_for_readme.png)](https://youtu.be/Wac7n8t8LPk)
 
@@ -147,5 +147,4 @@ the `LICENSE` file for details.
 
 Glowkit is open-source software released under the GPL license. Please see
 the `LICENSE.txt` file in the Glowkit repository for details.
-
 
