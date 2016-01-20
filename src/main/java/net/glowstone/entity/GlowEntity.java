@@ -145,6 +145,21 @@ public abstract class GlowEntity implements Entity {
     private int fireTicks = 0;
 
     /**
+     * Velocity reduction applied each tick.
+     */
+   private static final double AIR_DRAG = 0.99;
+
+   /**
+    * Velocity reduction applied each tick.
+    */
+   private static final double LIQUID_DRAG = 0.8;
+
+    /**
+    * Gravity acceleration applied each tick.
+    */
+    private static final Vector GRAVITY = new Vector(0, -0.05, 0);
+
+    /**
      * Creates an entity and adds it to the specified world.
      * @param location The location of the entity.
      */
@@ -620,12 +635,21 @@ public abstract class GlowEntity implements Entity {
     }
 
     protected void pulsePhysics() {
-        // todo: update location based on velocity,
-        // do gravity, all that other good stuff
-
+        if (!location.clone().add(getVelocity()).add(0, 1, 0).getBlock().getType().isSolid()) {
+           location.add(getVelocity());
+            if (location.getBlock().isLiquid()) {
+                velocity.multiply(LIQUID_DRAG);
+            } else {
+                velocity.multiply(AIR_DRAG);
+            }
+            velocity.add(GRAVITY);
+        }
         // make sure bounding box is up to date
         if (boundingBox != null) {
             boundingBox.setCenter(location.getX(), location.getY(), location.getZ());
+        }
+        if (location.getBlock().getType().isSolid()) {
+            setRawLocation(location.clone().add(0, 0.2, 0));
         }
     }
 
